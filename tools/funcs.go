@@ -23,9 +23,7 @@ func MD5(v string) string {
 	return hex.EncodeToString(m.Sum(nil))
 }
 
-// GenerateRandCode 生成随机码
-// candidate 候选字符串
-// length  随机码长度
+// GenerateRandCode 生成随机码 candidate 候选字符串 length 随机码长度
 func GenerateRandCode(candidate string, length int) string {
 	var letters = []rune(candidate)
 	b := make([]rune, length)
