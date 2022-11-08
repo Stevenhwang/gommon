@@ -72,3 +72,9 @@ func (ns *UInt) UnmarshalJSON(text []byte) error {
 	ns.UInt = j
 	return nil
 }
+
+// UnmarshalText will unmarshal text value into
+// the propert representation of that value.
+func (ns *UInt) UnmarshalText(text []byte) error {
+	return ns.UnmarshalJSON(text)
+}
