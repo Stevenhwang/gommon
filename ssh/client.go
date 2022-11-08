@@ -17,7 +17,7 @@ type SSHOptions struct {
 	Timeout uint
 }
 
-// 创建 ssh client, password 认证
+// GetSSHClientByPassword 创建 ssh client, password 认证
 func GetSSHClientByPassword(host string, password string, opts SSHOptions) (*gossh.Client, error) {
 	var port = defaultPort
 	var user = defaultUser
@@ -41,7 +41,7 @@ func GetSSHClientByPassword(host string, password string, opts SSHOptions) (*gos
 	return gossh.Dial("tcp", addr, config)
 }
 
-// 创建 ssh client, key 认证
+// GetSSHClientByKey 创建 ssh client, key 认证
 func GetSSHClientByKey(host string, key []byte, opts SSHOptions) (*gossh.Client, error) {
 	var port = defaultPort
 	var user = defaultUser
