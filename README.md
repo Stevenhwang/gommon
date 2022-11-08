@@ -16,6 +16,10 @@ SSHExec 执行 ssh shell 远程命令
 
 GetTimeString 获取以 offset 天数为偏移量的格式化字符串
 
+AesDecrypt 解密, NewCipher 该函数限制了输入 key 的长度必须为 16, 24 或者 32
+
+AesEncrypt 加密, NewCipher 该函数限制了输入 key 的长度必须为 16, 24 或者 32
+
 CheckPassword 检验 bycrypt 加密密码
 
 GeneratePassword 生成 bycrypt 加密密码
