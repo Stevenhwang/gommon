@@ -1,4 +1,4 @@
-module gommon
+module github.com/Stevenhwang/gommon
 
 go 1.19
 
