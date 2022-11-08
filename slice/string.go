@@ -1,6 +1,6 @@
 package slice
 
-// FindValInStringSlice 查询val是否在 string slice 中
+// FindValInStringSlice 查询 val 是否在 string slice 中
 func FindValInStringSlice(slice []string, val string) bool {
 	for _, v := range slice {
 		if v == val {
