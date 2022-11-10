@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"math/rand"
 	"os"
+	"os/exec"
 	"reflect"
 	"runtime"
 	"time"
@@ -40,4 +41,14 @@ func PathExists(path string) bool {
 		return false
 	}
 	return true
+}
+
+// ShellExec 执行本地 shell 命令
+func ShellExec(cmd string) string {
+	res := exec.Command("bash", "-c", cmd)
+	output, err := res.CombinedOutput()
+	if err != nil {
+		return err.Error()
+	}
+	return string(output)
 }

@@ -1,6 +1,8 @@
 package ssh
 
-import gossh "golang.org/x/crypto/ssh"
+import (
+	gossh "golang.org/x/crypto/ssh"
+)
 
 // SSHExec 执行 ssh shell 远程命令
 func SSHExec(cmd string, client *gossh.Client) (string, error) {

@@ -31,3 +31,5 @@ MD5 生成 md5 字符串
 NameOfFunction 获取函数的名字
 
 PathExists 判断所给路径文件/文件夹是否存在
+
+ShellExec 执行本地 shell 命令
