@@ -24,11 +24,22 @@ func MD5(v string) string {
 	return hex.EncodeToString(m.Sum(nil))
 }
 
-// GenerateRandCode 生成随机码 candidate 候选字符串 length 随机码长度
-func GenerateRandCode(candidate string, length int) string {
+// GenerateRandCodeByTime 使用unixnano生成随机码 candidate 候选字符串 length 随机码长度
+func GenerateRandCodeByTime(candidate string, length int) string {
 	var letters = []rune(candidate)
 	b := make([]rune, length)
 	rand.Seed(time.Now().UnixNano())
+	for i := range b {
+		b[i] = letters[rand.Intn(len(letters))]
+	}
+	return string(b)
+}
+
+// GenerateRandCodeBySeed 使用自定义种子生成随机码 seed自定义种子 candidate候选字符串 length随机码长度
+func GenerateRandCodeBySeed(seed int64, candidate string, length int) string {
+	var letters = []rune(candidate)
+	b := make([]rune, length)
+	rand.Seed(seed)
 	for i := range b {
 		b[i] = letters[rand.Intn(len(letters))]
 	}

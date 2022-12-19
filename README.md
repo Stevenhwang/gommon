@@ -24,7 +24,9 @@ CheckPassword 检验 bycrypt 加密密码
 
 GeneratePassword 生成 bycrypt 加密密码
 
-GenerateRandCode 生成随机码 candidate 候选字符串 length 随机码长度
+GenerateRandCodeBySeed 使用自定义种子生成随机码 seed 自定义种子 candidate 候选字符串 length 随机码长度
+
+GenerateRandCodeByTime 使用 unixnano 生成随机码 candidate 候选字符串 length 随机码长度
 
 MD5 生成 md5 字符串
 
